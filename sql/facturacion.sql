@@ -239,7 +239,7 @@ BEGIN
 				SET stock = stock + NEW.quantity
 		WHERE id = NEW.product;
 
-		RETURNS NEW;
+		RETURN NEW;
 END
 $$ LANGUAGE plpgsql;
 
@@ -271,7 +271,7 @@ CREATE VIEW vw_sale AS
 				pr.description,
 				p.quantity
 		FROM
-				sale_p
+				sale p
 				INNER JOIN product pr ON p.product = pr.id;
 
 CREATE OR REPLACE FUNCTION sale (
@@ -279,13 +279,13 @@ CREATE OR REPLACE FUNCTION sale (
 		IN p_quantity				integer
 )RETURNS integer AS 
 $$
-		INSERT INTO sale(product, quantity),
-				VALUES(p.product, p.quantity)
+		INSERT INTO sale(product, quantity)
+				VALUES(p_product, p_quantity)
 		RETURNING id;
 $$ LANGUAGE sql VOLATILE STRICT;
 
 CREATE OR REPLACE FUNCTION sale_destroy(
-		IN p_id
+		IN p.id					integer
 ) RETURNS void AS
 $$
 		DELETE FROM sale WHERE id = p.id;

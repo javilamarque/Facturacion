@@ -16,7 +16,7 @@ public abstract class Controller {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/facturacion",
-                    "dba", 
+                    "javier", 
                     "1234"
             );
             

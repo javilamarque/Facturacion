@@ -285,10 +285,10 @@ $$
 $$ LANGUAGE sql VOLATILE STRICT;
 
 CREATE OR REPLACE FUNCTION sale_destroy(
-		IN p.id					integer
+		IN p_id					integer
 ) RETURNS void AS
 $$
-		DELETE FROM sale WHERE id = p.id;
+		DELETE FROM sale WHERE id = p_id;
 $$ LANGUAGE sql VOLATILE STRICT;
 
 CREATE OR REPLACE FUNCTION sale_search (

@@ -3,8 +3,8 @@ com/itedes/facturacion/resources/ProductResource.class
 com/itedes/facturacion/controller/Controller.class
 com/itedes/facturacion/controller/ProductController.class
 com/itedes/facturacion/dto/sale/SaleResponseDto.class
-com/itedes/facturacion/controller/PurchaseController.class
 com/itedes/facturacion/dto/product/ProductRequestCreationDto.class
+com/itedes/facturacion/controller/PurchaseController.class
 com/itedes/facturacion/dto/sale/SaleRequestCreationDto.class
 com/itedes/facturacion/resources/SaleResource.class
 com/itedes/facturacion/dto/product/ProductResponseDto.class

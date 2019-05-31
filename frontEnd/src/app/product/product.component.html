@@ -1,0 +1,16 @@
+<h1>Alta de Producto</h1>
+<hr>
+<input type="text" [(ngModel)]="this.name" placeholder="Nombre del Producto"> 
+<br>
+<input type="text" [(ngModel)]="this.description" placeholder="Descripcion del Producto"> 
+<br>
+<input type="text" [(ngModel)]="this.price" placeholder="Precio del Producto"> 
+<br>
+<button (click)="this.createProduct()">
+  Crear Producto
+</button>
+<br>
+<hr>
+<h2>{{this.name}}</h2>
+<h2>{{this.description}}</h2>
+<h2>{{this.price}}</h2>
